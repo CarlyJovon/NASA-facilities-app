@@ -1,25 +1,60 @@
-body { 
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(242,244,248);
-    color: rgb(31, 38, 55);
+
+* {
+    box-sizing: border-box;
 }
 
-main { 
-    background-color: rgb(32, 64, 139);
-    color: aliceblue;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: rgb(252, 252, 252);
+    color: rgb(30, 41, 59);
+}
+
+main {
+    background: #12345a;
+    color: white;
     text-align: center;
-    padding: .2rem;
+    padding: 35px 20px;
 }
 
-main h1 { 
-    margin: 0; 
+main h1 {
+    margin: 0;
+    font-size: 3rem;
 }
 
-main p { 
-    margin: .5rem; 
+main p {
+    color: rgb(240, 243, 247);
 }
 
-#facilities { 
-    color: rgb(11,64,145);
+/* Facility grid */
+#facilities {
+    list-style: none;
+    padding: 25px;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    color: rgb(30, 41, 59);
 }
 
+/* Facility Listings */
+#facilities li {
+    background: white;
+    padding: 25px;
+    border: 1px solid #0b0b0b;
+}
+
+
+
+/* Media Queries*/
+@media (max-width: 600px) {
+    #facilities {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    main h1 {
+        font-size: 1.6rem;
+    }
+}
